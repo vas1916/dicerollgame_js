@@ -10,6 +10,8 @@ const diceEle=document.querySelector('.dice');
 const btnNew=document.querySelector('.btn--new');
 const btnRoll=document.querySelector('.btn--roll');
 const btnHold=document.querySelector('.btn--hold');
+const winDisplay0Ele=document.getElementById('winner--0');
+const winDisplay1Ele=document.getElementById('winner--1');
 
 
 
@@ -31,6 +33,8 @@ const init= function(){
     player0Ele.classList.add('player--active');
     player1Ele.classList.remove('player--active');
     diceEle.classList.remove('hidden');
+    winDisplay0Ele.classList.add('hidden');
+    winDisplay1Ele.classList.add('hidden');
 }
 init();
 const switchPlayer= function(){
@@ -75,6 +79,8 @@ btnHold.addEventListener('click', function(){
         document.querySelector(`.player--${activePlayer}`).classList.remove('player--active');
         playing=false;
         diceEle.classList.add('hidden');
+        document.querySelector(`#winner--${activePlayer}`).classList.remove('hidden');
+       // winDisplayEle.classList.remove('hidden');
             //Finish the game
     }else{
         //3. Switch to the next player

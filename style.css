@@ -63,6 +63,13 @@ main {
   margin-bottom: auto;
 }
 
+.winner {
+  font-size: 4rem;
+  font-weight: 300;
+  color: #0be00b;
+  margin-bottom: auto;
+}
+
 .player--active {
   background-color: rgba(255, 255, 255, 0.4);
 }
